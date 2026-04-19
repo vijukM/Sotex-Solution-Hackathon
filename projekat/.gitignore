@@ -1,0 +1,21 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*/__pycache__/
+*.py[cod]
+
+# Editor temp files
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated images / outputs
+outputs/
+
+# Optional local exploration
+notebooks/
