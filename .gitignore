@@ -1,0 +1,30 @@
+# Virtual environments
+.venv/
+**/.venv/
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Generated outputs
+outputs/
+**/outputs/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Local notebooks
+notebooks/
+
+# Editor temp files
+*.swp
+*.swo
+*~
+
+# Local package files
+*.deb
+
+# Scratch/local files
+raditi
+.raditi.swp
