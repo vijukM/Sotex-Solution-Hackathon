@@ -1,0 +1,74 @@
+<div class="app-shell">
+  <header class="top-header">
+    <div class="brand-title">Sotex Hackathon 2026</div>
+
+    <nav class="header-nav">
+      <!-- Fixed Dashboard button -->
+      <a class="nav-btn" routerLink="/dashboard" routerLinkActive="active-nav">Dashboard</a>
+
+      <!-- Map Dropdown Wrapper -->
+      <div class="map-dropdown-wrapper">
+        <a class="nav-btn" routerLink="/map" routerLinkActive="active-nav" [class.menu-open]="showMapMenu" style="display: flex; align-items: center; gap: 6px;">
+          Map
+          <span *ngIf="isMapRoute" (click)="$event.preventDefault(); toggleMapMenu($event)" style="display: flex; align-items: center; padding: 2px; border-radius: 4px;">
+            <span *ngIf="isLoading" class="spinner"></span>
+            <span *ngIf="!isLoading" class="arrow-icon">▼</span>
+          </span>
+        </a>
+
+        <!-- Map Popup Menu (only shows on /map) -->
+        <div class="map-popup-menu" *ngIf="isMapRoute && showMapMenu" (click)="$event.stopPropagation()">
+          <div class="checkbox-column">
+            <label class="toggle-wrap">
+              <input type="checkbox" [(ngModel)]="filters.showSN" (change)="onFilterChange()" />
+              <span>Srednjenaponske stanice</span>
+            </label>
+            <label class="toggle-wrap">
+              <input type="checkbox" [(ngModel)]="filters.showVN" (change)="onFilterChange()" />
+              <span>Visokonaponske stanice</span>
+            </label>
+            <label class="toggle-wrap">
+              <input type="checkbox" [(ngModel)]="filters.showDT" (change)="onFilterChange()" />
+              <span>Niskonaponske stanice</span>
+            </label>
+          </div>
+
+          <label class="toggle-wrap autoload-wrap">
+            <input type="checkbox" [(ngModel)]="filters.autoLoad" (change)="onFilterChange()" />
+            <span>Auto pomeranje</span>
+          </label>
+
+          <label class="toggle-wrap autoload-wrap" [class.disabled-wrap]="isZoomTooLowForUnclustered">
+            <input type="checkbox" [(ngModel)]="filters.useClustering" (change)="onFilterChange()" [disabled]="isZoomTooLowForUnclustered" />
+            <span [title]="isZoomTooLowForUnclustered ? 'Zumirajte mapu da biste iskljucili grupisanje' : ''">Grupisanje markera</span>
+          </label>
+
+          <hr style="opacity: 0.2; margin: 8px 0; border: none; border-bottom: 1px solid white;">
+
+          <div class="checkbox-column">
+            <label class="toggle-wrap" [class.disabled-wrap]="!(filters.showVN && (filters.showSN || filters.showDT))">
+              <input type="checkbox" [(ngModel)]="filters.showF33" (change)="onFilterChange()" [disabled]="!(filters.showVN && (filters.showSN || filters.showDT))" />
+              <span [title]="!(filters.showVN && (filters.showSN || filters.showDT)) ? 'Zahteva ukljucenu VN i makar jos jedan tip stanice' : ''">F33 (33kV Vodovi)</span>
+            </label>
+            <label class="toggle-wrap" [class.disabled-wrap]="!(filters.showDT && (filters.showVN || filters.showSN))">
+              <input type="checkbox" [(ngModel)]="filters.showF11" (change)="onFilterChange()" [disabled]="!(filters.showDT && (filters.showVN || filters.showSN))" />
+              <span [title]="!(filters.showDT && (filters.showVN || filters.showSN)) ? 'Zahteva ukljucen DT i makar jos jedan tip stanice' : ''">F11 (11kV Vodovi)</span>
+            </label>
+          </div>
+
+          <button type="button" class="load-btn" (click)="triggerFetch()">
+            Prikazi podstanice
+          </button>
+        </div>
+      </div>
+
+      <!-- Other static links -->
+      <a class="nav-btn" routerLink="/analytics" routerLinkActive="active-nav">Analytics</a>
+      <a class="nav-btn" routerLink="/alerts" routerLinkActive="active-nav">Alerts</a>
+    </nav>
+  </header>
+
+  <main class="page-body" (click)="showMapMenu = false">
+    <router-outlet></router-outlet>
+  </main>
+</div>

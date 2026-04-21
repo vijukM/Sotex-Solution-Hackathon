@@ -1,0 +1,86 @@
+<section class="map-page">
+    <div
+        class="map-container"
+        leaflet
+        [leafletOptions]="options"
+        [leafletLayers]="layers"
+        (leafletMapReady)="onMapReady($event)"
+        (leafletMapMoveEnd)="onMapMoveEnd()">
+    </div>
+
+    <!-- Add Station Floating Action Button -->
+    <button class="btn btn-primary btn-lg rounded-circle shadow-lg" (click)="openAddStationModal()" style="position: absolute; bottom: 30px; left: 30px; z-index: 1000; width: 60px; height: 60px; font-size: 28px; line-height: 1; padding: 0; background: #0d6efd; color: white; border: none; align-items: center; justify-content: center; display: flex; cursor: pointer;">
+        +
+    </button>
+
+    <!-- Custom Add Station Modal -->
+    <div *ngIf="showAddStationModal" (click)="closeAddStationModal()" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 5000; display: flex; align-items: center; justify-content: center;">
+        <div (click)="$event.stopPropagation()" style="background: white; border-radius: 8px; width: 400px; max-width: 90vw; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+            <div style="display: flex; align-items: center; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 15px;">
+                <h5 style="margin: 0; font-weight: bold; font-family: sans-serif; flex: 1;">Nova stanica</h5>
+                <button (click)="pickLocationOnMap()" style="background: transparent; border: none; font-size: 20px; cursor: pointer; padding: 0 15px;" title="Klikni da odabereš lokaciju na mapi">
+                    📍
+                </button>
+                <button (click)="closeAddStationModal()" style="background: transparent; border: none; font-size: 24px; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
+            </div>
+            
+
+            <div style="margin-bottom: 15px; font-family: sans-serif;">
+                <label style="font-size: 13px; font-weight: bold; display: block; margin-bottom: 5px;">Koju stanicu zelite da dodate?</label>
+                <select [(ngModel)]="newStation.type" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                    <option value="TS">Visokonaponska stanica </option>
+                    <option value="SS">Srednjenaponska stanica</option>
+                    <option value="DT">Distributivna trafostanica</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 15px; font-family: sans-serif;">
+                <label style="font-size: 13px; font-weight: bold; display: block; margin-bottom: 5px;">Ime nove stanice</label>
+                <input type="text" [(ngModel)]="newStation.name" placeholder="Unesite naziv stanice" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            </div>
+
+            <div style="display: flex; gap: 10px; margin-bottom: 15px; font-family: sans-serif; align-items: flex-end;">
+                <div style="flex: 1;">
+                    <label style="font-size: 13px; font-weight: bold; display: block; margin-bottom: 5px;">Latitude</label>
+                    <input type="number" [(ngModel)]="newStation.latitude" step="0.000001" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                </div>
+                <div style="flex: 1;">
+                    <label style="font-size: 13px; font-weight: bold; display: block; margin-bottom: 5px;">Longitude</label>
+                    <input type="number" [(ngModel)]="newStation.longitude" step="0.000001" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                </div>
+            </div>
+
+            <div *ngIf="newStation.type === 'DT'" style="margin-bottom: 15px; font-family: sans-serif;">
+                <label style="font-size: 13px; font-weight: bold; display: block; margin-bottom: 5px;">Instalirana snaga (kVA)</label>
+                <select [(ngModel)]="newStation.nameplateRating" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                    <option [ngValue]="null">Izaberi...</option>
+                    <option [ngValue]="50">50</option>
+                    <option [ngValue]="100">100</option>
+                    <option [ngValue]="160">160</option>
+                    <option [ngValue]="250">250</option>
+                    <option [ngValue]="400">400</option>
+                    <option [ngValue]="630">630</option>
+                    <option [ngValue]="800">800</option>
+                    <option [ngValue]="1000">1000</option>
+                </select>
+            </div>
+            
+            <div style="border-top: 1px solid #ccc; padding-top: 15px; display: flex; justify-content: flex-end; gap: 10px; font-family: sans-serif;">
+                <button (click)="closeAddStationModal()" style="padding: 8px 16px; border: 1px solid #ccc; border-radius: 4px; background: white; cursor: pointer;">Odustani</button>
+                <button (click)="saveNewStation()" [disabled]="!newStation.name || !newStation.latitude || !newStation.longitude" style="padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer;">Kreiraj</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-stack">
+        <div
+            class="toast-item"
+            *ngFor="let toast of toasts"
+            [class.toast-success]="toast.type === 'success'"
+            [class.toast-error]="toast.type === 'error'"
+            [class.toast-info]="toast.type === 'info'">
+            <span>{{ toast.text }}</span>
+            <button type="button" (click)="dismissToast(toast.id)">x</button>
+        </div>
+    </div>
+</section>

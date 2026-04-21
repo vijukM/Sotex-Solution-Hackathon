@@ -1,0 +1,14 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Sotex_Hackathon.Domain
+{
+    [Table("Feeder33Substation")]
+    public class Feeder33Substation : IEntity
+    {
+        [NotMapped]
+        public int Id { get; set; }
+        
+        public int Feeders33Id { get; set; }
+        public int SubstationsId { get; set; }
+    }
+}

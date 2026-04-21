@@ -1,0 +1,6 @@
+@Sotex_Hackathon_HostAddress = http://localhost:5067
+
+GET {{Sotex_Hackathon_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

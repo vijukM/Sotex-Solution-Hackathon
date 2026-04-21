@@ -1,0 +1,17 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Sotex_Hackathon.Domain
+{
+    [Table("DistributionSubstation")]
+    public class DistributionSubstations : IEntity
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int? MeterId { get; set; }
+        public int? Feeder11Id { get; set; }
+        public int? Feeder33Id { get; set; }
+        public int? NameplateRating { get; set; }
+        public decimal? Latitude { get; set; }
+        public decimal? Longitude { get; set; }
+    }
+}

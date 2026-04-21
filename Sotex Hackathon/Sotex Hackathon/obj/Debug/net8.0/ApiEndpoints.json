@@ -1,0 +1,1016 @@
+[
+  {
+    "ContainingType": "Sotex_Hackathon.API.ChannelsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Channels",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.ChannelsController",
+    "Method": "Create",
+    "RelativePath": "api/Channels",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.Channels",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.ChannelsController",
+    "Method": "Get",
+    "RelativePath": "api/Channels/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.ChannelsController",
+    "Method": "Update",
+    "RelativePath": "api/Channels/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.Channels",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.ChannelsController",
+    "Method": "Delete",
+    "RelativePath": "api/Channels/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.DistributionSubstationsController",
+    "Method": "GetAll",
+    "RelativePath": "api/DistributionSubstations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.DistributionSubstationsController",
+    "Method": "Create",
+    "RelativePath": "api/DistributionSubstations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.DistributionSubstations",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.DistributionSubstationsController",
+    "Method": "Get",
+    "RelativePath": "api/DistributionSubstations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.DistributionSubstationsController",
+    "Method": "Update",
+    "RelativePath": "api/DistributionSubstations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.DistributionSubstations",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.DistributionSubstationsController",
+    "Method": "Delete",
+    "RelativePath": "api/DistributionSubstations/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.DistributionSubstationsController",
+    "Method": "GetByBounds",
+    "RelativePath": "api/DistributionSubstations/by-bounds",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "minLat",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "maxLat",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "minLon",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "maxLon",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeder33SubstationController",
+    "Method": "GetAll",
+    "RelativePath": "api/Feeder33Substation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeder33SubstationController",
+    "Method": "Create",
+    "RelativePath": "api/Feeder33Substation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.Feeder33Substation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeder33SubstationController",
+    "Method": "Get",
+    "RelativePath": "api/Feeder33Substation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeder33SubstationController",
+    "Method": "Update",
+    "RelativePath": "api/Feeder33Substation/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.Feeder33Substation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeder33SubstationController",
+    "Method": "Delete",
+    "RelativePath": "api/Feeder33Substation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeders11Controller",
+    "Method": "GetAll",
+    "RelativePath": "api/Feeders11",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeders11Controller",
+    "Method": "Create",
+    "RelativePath": "api/Feeders11",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.Feeders11",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeders11Controller",
+    "Method": "Get",
+    "RelativePath": "api/Feeders11/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeders11Controller",
+    "Method": "Update",
+    "RelativePath": "api/Feeders11/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.Feeders11",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeders11Controller",
+    "Method": "Delete",
+    "RelativePath": "api/Feeders11/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeders33Controller",
+    "Method": "GetAll",
+    "RelativePath": "api/Feeders33",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeders33Controller",
+    "Method": "Create",
+    "RelativePath": "api/Feeders33",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.Feeders33",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeders33Controller",
+    "Method": "Get",
+    "RelativePath": "api/Feeders33/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeders33Controller",
+    "Method": "Update",
+    "RelativePath": "api/Feeders33/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.Feeders33",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.Feeders33Controller",
+    "Method": "Delete",
+    "RelativePath": "api/Feeders33/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MeterReadsController",
+    "Method": "GetAll",
+    "RelativePath": "api/MeterReads",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MeterReadsController",
+    "Method": "Create",
+    "RelativePath": "api/MeterReads",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.MeterReads",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MeterReadsController",
+    "Method": "Get",
+    "RelativePath": "api/MeterReads/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MeterReadsController",
+    "Method": "Update",
+    "RelativePath": "api/MeterReads/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.MeterReads",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MeterReadsController",
+    "Method": "Delete",
+    "RelativePath": "api/MeterReads/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MeterReadTfesController",
+    "Method": "GetAll",
+    "RelativePath": "api/MeterReadTfes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MeterReadTfesController",
+    "Method": "Create",
+    "RelativePath": "api/MeterReadTfes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.MeterReadTfes",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MeterReadTfesController",
+    "Method": "Get",
+    "RelativePath": "api/MeterReadTfes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MeterReadTfesController",
+    "Method": "Update",
+    "RelativePath": "api/MeterReadTfes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.MeterReadTfes",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MeterReadTfesController",
+    "Method": "Delete",
+    "RelativePath": "api/MeterReadTfes/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MetersController",
+    "Method": "GetAll",
+    "RelativePath": "api/Meters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MetersController",
+    "Method": "Create",
+    "RelativePath": "api/Meters",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.Meters",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MetersController",
+    "Method": "Get",
+    "RelativePath": "api/Meters/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MetersController",
+    "Method": "Update",
+    "RelativePath": "api/Meters/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.Meters",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.MetersController",
+    "Method": "Delete",
+    "RelativePath": "api/Meters/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.SubstationsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Substations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.SubstationsController",
+    "Method": "Create",
+    "RelativePath": "api/Substations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.Substations",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.SubstationsController",
+    "Method": "Get",
+    "RelativePath": "api/Substations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.SubstationsController",
+    "Method": "Update",
+    "RelativePath": "api/Substations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.Substations",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.SubstationsController",
+    "Method": "Delete",
+    "RelativePath": "api/Substations/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.SubstationsController",
+    "Method": "GetByBounds",
+    "RelativePath": "api/Substations/by-bounds",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "minLat",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "maxLat",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "minLon",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "maxLon",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.TransmissionStationsController",
+    "Method": "GetAll",
+    "RelativePath": "api/TransmissionStations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.TransmissionStationsController",
+    "Method": "Create",
+    "RelativePath": "api/TransmissionStations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.TransmissionStations",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.TransmissionStationsController",
+    "Method": "Get",
+    "RelativePath": "api/TransmissionStations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.TransmissionStationsController",
+    "Method": "Update",
+    "RelativePath": "api/TransmissionStations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "Sotex_Hackathon.Domain.TransmissionStations",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.TransmissionStationsController",
+    "Method": "Delete",
+    "RelativePath": "api/TransmissionStations/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.API.TransmissionStationsController",
+    "Method": "GetByBounds",
+    "RelativePath": "api/TransmissionStations/by-bounds",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "minLat",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "maxLat",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "minLon",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "maxLon",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sotex_Hackathon.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Sotex_Hackathon.WeatherForecast, Sotex Hackathon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

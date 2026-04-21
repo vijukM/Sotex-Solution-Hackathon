@@ -1,0 +1,20 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Sotex_Hackathon.Infrastructure
+{
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+        public DbSet<Domain.Feeders11> Feeders11 { get; set; }
+        public DbSet<Domain.Feeders33> Feeders33 { get; set; }
+        public DbSet<Domain.Substations> Substations { get; set; }
+        public DbSet<Domain.TransmissionStations> TransmissionStations { get; set; }
+        public DbSet<Domain.DistributionSubstations> DistributionSubstations { get; set; }
+        public DbSet<Domain.Feeder33Substation> Feeder33Substation { get; set; }
+        public DbSet<Domain.MeterReadTfes> MeterReadTfes { get; set; }
+        public DbSet<Domain.MeterReads> MeterReads { get; set; }
+        public DbSet<Domain.Meters> Meters { get; set; }
+        public DbSet<Domain.Channels> Channels { get; set; }
+    }
+}

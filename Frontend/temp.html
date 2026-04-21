@@ -1,0 +1,120 @@
+<div class="dashboard-container" *ngIf="!isLoading; else loadingState">
+    <div class="dashboard-header">
+        <h2 class="title">Analitika Mreže </h2>
+        <p class="subtitle">Pregled stanica, povezanih vodova i analitika podataka</p>
+    </div>
+
+    <!-- KPIs Row -->
+    <div class="kpi-row">
+        <div class="kpi-card ts-card">
+            <div class="kpi-icon-image">
+                <img src="assets/TS.png" alt="TS Icon" width="40" height="40" />
+            </div>
+            <div class="kpi-info">
+                <h3>{{totalTs}}</h3>
+                <p>TS (Visokonaponske)</p>
+            </div>
+        </div>
+        <div class="kpi-card ss-card">
+            <div class="kpi-icon-image">
+                <img src="assets/SS.png" alt="SS Icon" width="40" height="40" />
+            </div>
+            <div class="kpi-info">
+                <h3>{{totalSs}}</h3>
+                <p>SS (Srednjenaponske)</p>
+            </div>
+        </div>
+        <div class="kpi-card ds-card">
+            <div class="kpi-icon-image">
+                <img src="assets/DS.png" alt="DS Icon" width="40" height="40" />
+            </div>
+            <div class="kpi-info">
+                <h3>{{totalDs}}</h3>
+                <p>DS (Distribucijske)</p>
+            </div>
+        </div>
+
+        <div class="kpi-card connection-card">
+            <div class="connection-visual" style="justify-content: center; gap: 15px;">
+                <img src="assets/TS.png" alt="TS" width="30" height="30" />
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <span style="font-weight: 700; color: #38b2ce; font-size: 0.85rem;">F33 VOD</span>
+                    <span style="font-size: 1.5rem; color: #38b2ce; margin: -5px 0;">&#10145;&#65039;</span>
+                    <span style="font-size: 0.8rem; color: #555; font-weight: 600;">{{dsWithF33}} DS-a</span>
+                </div>
+                <img src="assets/DS.png" alt="DS" width="30" height="30" />
+            </div>
+        </div>
+
+        <div class="kpi-card connection-card">
+            <div class="connection-visual" style="justify-content: center; gap: 15px;">
+                <img src="assets/SS.png" alt="SS" width="30" height="30" />
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <span style="font-weight: 700; color: #8a2be2; font-size: 0.85rem;">F11 VOD</span>
+                    <span style="font-size: 1.5rem; color: #8a2be2; margin: -5px 0;">&#10145;&#65039;</span>
+                    <span style="font-size: 0.8rem; color: #555; font-weight: 600;">{{dsWithF11}} DS-a</span>
+                </div>
+                <img src="assets/DS.png" alt="DS" width="30" height="30" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="grid-container">
+        <!-- Left Column: Charts -->
+        <div class="charts-column" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="panel chart-panel">
+                <h4 class="panel-title">Raspored tipova stanica</h4>
+                <div class="chart-wrapper">
+                    <canvas baseChart 
+                        [data]="pieChartData" 
+                        [type]="pieChartType" 
+                        [options]="pieChartOptions">
+                    </canvas>
+                </div>
+            </div>
+
+            <div class="panel chart-panel">
+                <h4 class="panel-title">Povezanost DS na vodovima</h4>
+                <div class="chart-wrapper">
+                    <canvas baseChart 
+                        [data]="dsPieChartData" 
+                        [type]="dsPieChartType" 
+                        [options]="dsPieChartOptions">
+                    </canvas>
+                </div>
+            </div>
+            
+            <div class="panel chart-panel" style="grid-column: 1 / -1;">
+                <h4 class="panel-title">Top 5 stanica sa najvi�e distribucijskih trafoa</h4>
+                <div class="chart-wrapper">
+                    <canvas baseChart 
+                        [data]="barChartData" 
+                        [type]="barChartType" 
+                        [options]="barChartOptions">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Geographic Column: Map -->
+        <div class="panel map-panel" style="grid-column: 1 / -1;">
+            <h4 class="panel-title">Geografska distribucija TS i SS stanica</h4>
+            <div id="mini-map" style="height: 300px; width: 100%; border-radius: 8px; border: 1px solid #eee;"></div>
+        </div>
+        <!-- Layout adjust -->
+    </div>
+</div>
+
+<ng-template #loadingState>
+    <div class="loading-wrapper">
+        <div class="spinner"></div>
+        <p>Učitavanje analitike mreže...</p>
+    </div>
+</ng-template>
+
+
+
+
+
+
